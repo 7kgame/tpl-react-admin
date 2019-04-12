@@ -37,7 +37,7 @@
 
 ### 使用命令行
 ```bash
-$ git clone https://github.com/7kgame/tpl-react-ap.git
+$ git clone https://github.com/7kgame/tpl-react-admin.git
 $ cd tpl-react-ap
 $ npm install
 $ npm start         # 访问 http://localhost:8000
