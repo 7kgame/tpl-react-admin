@@ -126,7 +126,6 @@
     "serverless-http": "^1.9.1"
   },
   "optionalDependencies": {
-    "puppeteer": "^1.12.1"
   },
   "engines": {
     "node": ">=8.0.0"

@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   // user
   {
     path: '/user',
@@ -293,6 +293,12 @@ export default [
       {
         component: '404',
       },
+      {
+              path: '/tester',
+              name: 'tester',
+              icon: 'highlight',
+              component: './Tester/Tester'
+      }
     ],
   },
 ];
