@@ -1,4 +1,4 @@
-import queryError from '@/services/error';
+import queryError from '@/api/error';
 
 export default {
   namespace: 'error',

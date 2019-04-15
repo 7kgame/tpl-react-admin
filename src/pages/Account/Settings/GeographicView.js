@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Select, Spin } from 'antd';
 import { connect } from 'dva';
+// import  geographic  from '@/models/Account_Setting/geographic'
 import styles from './GeographicView.less';
 
 const { Option } = Select;
