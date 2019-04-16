@@ -1,8 +1,9 @@
 {
-  "name": "ant-design-pro",
-  "version": "2.3.1",
+  "name": "<%= name %>",
+  "version": "<%= version %>",
   "private": true,
-  "description": "An out-of-box UI solution for enterprise applications",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
   "scripts": {
     "analyze": "cross-env ANALYZE=1 umi build",
     "build": "umi build && npm run functions:build",
@@ -23,7 +24,7 @@
     "lint:prettier": "check-prettier lint",
     "lint:style": "stylelint 'src/**/*.less' --syntax less",
     "prettier": "node ./scripts/prettier.js",
-    "start": "cross-env APP_TYPE=site umi dev",
+    "start": "cross-env APP_TYPE=site umi dev --port=<%= port %>",
     "start:no-mock": "cross-env MOCK=none umi dev",
     "test": "umi test",
     "test:all": "node ./tests/run-tests.js",
