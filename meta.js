@@ -9,7 +9,7 @@ module.exports = {
           },
           description: {
             message: "Project description",
-            default: "nodejs web framework"
+            default: "react web framework"
           },
           author: {
             message: "Author"
@@ -23,23 +23,6 @@ module.exports = {
             message: "set port for the httpserver",
             default: 8000
           },
-          datasource: {
-            type: "checkbox",
-            message: "select datasource",
-            choices: [
-              {
-                name: "mongo",
-                //checked: true
-              },
-              {
-                name: "mysql",
-              },
-              {
-                name: "redis",
-              },
-            ]
-          }
-        },
         include: [
           '*.json',
           '*.js',
