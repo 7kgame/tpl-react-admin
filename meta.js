@@ -14,10 +14,6 @@ module.exports = {
     author: {
       message: "Author"
     },
-    host: {
-      message: "set host for the httpserver",
-      default: 'localhost'
-    },
     port: {
       type: "nubmer",
       message: "set port for the httpserver",
