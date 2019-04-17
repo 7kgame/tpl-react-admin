@@ -1,7 +1,7 @@
 import RouterConfig from '../../config/router.config';
 
-// const BASE_URL = `http://localhost:${process.env.PORT || 8000}`;
-const BASE_URL = `http://<%= host %>:${process.env.PORT || 8000}`;
+const BASE_URL = `http://localhost:${process.env.PORT || 8000}`;
+// const BASE_URL = `http://<%= host %>:${process.env.PORT || 8000}`;
 
 function formatter(data) {
   return data

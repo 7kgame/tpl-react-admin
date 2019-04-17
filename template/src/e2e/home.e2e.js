@@ -1,5 +1,5 @@
-// const BASE_URL = `http://localhost:${process.env.PORT || 8000}`;
-const BASE_URL = `http://<%= host %>:${process.env.PORT || 8000}`;
+const BASE_URL = `http://localhost:${process.env.PORT || 8000}`;
+// const BASE_URL = `http://<%= host %>:${process.env.PORT || 8000}`;
 
 describe('Homepage', () => {
   beforeAll(async () => {
