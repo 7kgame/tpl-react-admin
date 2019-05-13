@@ -6,6 +6,16 @@ import { extend } from 'umi-request';
 import { notification } from 'antd';
 import router from 'umi/router';
 
+
+const apiHostConfig = {
+  dev: 'http://localhost:8000',
+  prod: 'http://dev.open-api.7k7k.com'
+};
+
+const { APP_ENV } = process.env;
+
+const apiHost = typeof apiHostConfig[APP_ENV] === 'undefined' ? apiHostConfig.prod : apiHostConfig[APP_ENV]
+
 const codeMessage = {
   200: '服务器成功返回请求的数据。',
   201: '新建或修改数据成功。',
@@ -48,23 +58,28 @@ const errorHandler = error => {
     description: errortext,
   });
   // environment should not be used
-  if (status === 403) {
-    router.push('/exception/403');
-    return;
-  }
-  if (status <= 504 && status >= 500) {
-    router.push('/exception/500');
-    return;
-  }
-  if (status >= 404 && status < 422) {
-    router.push('/exception/404');
-  }
+  // if (status === 403) {
+  //   router.push('/exception/403');
+  //   return;
+  // }
+  // if (status <= 504 && status >= 500) {
+  //   router.push('/exception/500');
+  //   return;
+  // }
+  // if (status >= 404 && status < 422) {
+  //   router.push('/exception/404');
+  // }
 };
 
+const headers = {
+  "Content-Type": "application/x-www-form-urlencoded",
+}
 /**
  * 配置request请求时的默认参数
  */
 const request = extend({
+  prefix: apiHost,  //  请求域名配置
+  headers,  //  请求头配置
   errorHandler, // 默认错误处理
   credentials: 'include', // 默认请求是否带上cookie
 });

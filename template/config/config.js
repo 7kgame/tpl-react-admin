@@ -6,7 +6,7 @@ import defaultSettings from '../src/defaultSettings';
 import slash from 'slash2';
 
 const { pwa, primaryColor } = defaultSettings;
-const { APP_TYPE, TEST } = process.env;
+const { APP_TYPE, TEST, APP_ENV, NODE_ENV } = process.env;
 
 const plugins = [
   [
@@ -63,6 +63,10 @@ export default {
   plugins,
   define: {
     APP_TYPE: APP_TYPE || '',
+    'process.env': {
+      NODE_ENV,
+      APP_ENV: APP_ENV
+    },
   },
   treeShaking: true,
   targets: {

@@ -5,11 +5,9 @@
   "description": "<%= description %>",
   "author": "<%= author %>",
   "scripts": {
-    "build": "umi build && npm run functions:build",
-    "functions:build": "npm run generateMock && netlify-lambda build ./lambda",
-    "functions:run": "npm  run generateMock && cross-env NODE_ENV=dev netlify-lambda serve ./lambda",
-    "generateMock": "node ./scripts/generateMock",
-    "start": "cross-env APP_TYPE=site umi dev --port=<%= port %>",
+    "build": "cross-env APP_ENV=prod umi build",
+    "start:d": "cross-env APP_TYPE=site APP_ENV=dev umi dev --port=<%= port %>",
+    "start:p": "cross-env APP_TYPE=site APP_ENV=prod umi dev --port=<%= port %>",
     "start:no-mock": "cross-env MOCK=none umi dev",
     "test": "umi test"
   },
